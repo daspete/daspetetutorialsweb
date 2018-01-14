@@ -23,11 +23,15 @@ module.exports = {
     },
 
     css: [
-        '~/assets/css/main.scss'
+        '~/assets/css/main.scss',
+        '~/node_modules/prismjs/themes/prism-okaidia.css'
     ],
 
     build: {
-        extractCSS: true
+        extractCSS: true,
+        vendor: [
+            'prismjs'
+        ]
     },
 
     modules: [
@@ -35,6 +39,6 @@ module.exports = {
     ],
 
     plugins: [
-
+        '~/plugins/markdown'
     ]
 }
